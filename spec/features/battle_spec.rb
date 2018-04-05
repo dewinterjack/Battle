@@ -1,7 +1,7 @@
 feature 'allow players to input names and display them' do
   scenario 'fillable form appears' do
     visit ('/')
-    expect(page).to have_content ("Please enter your name")
+    expect(page).to have_content ("PLEASE ENTER YOUR NAME")
   end
 
   scenario 'form accepts name and displays it' do
@@ -14,7 +14,7 @@ feature 'allow players to have 100 HP to start with' do
   scenario 'opening the play page, this is viewable' do
     visit '/'
     sign_in_and_play
-    expect(page).to have_content ("Player 1 HP: 100")
+    expect(page).to have_content ("HP 100")
   end
 end
 
@@ -23,14 +23,14 @@ feature 'allow users to attack each other' do
     visit '/'
     sign_in_and_play
     find_button('Attack Elaine Marley').click
-    expect(page).to have_content ('Player 2 HP: 80')
+    expect(page).to have_content ('HP 80')
   end
 
   scenario 'Player 2 should be able to attack player 1' do
     visit '/'
     sign_in_and_play
     find_button('Attack Guybrush Threepwood').click
-    expect(page).to have_content ('Player 1 HP: 80')
+    expect(page).to have_content ('HP 80')
   end
 
-  end
+end
