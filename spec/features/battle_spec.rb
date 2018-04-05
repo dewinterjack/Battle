@@ -25,4 +25,12 @@ feature 'allow users to attack each other' do
     find_button('Attack Elaine Marley').click
     expect(page).to have_content ('Player 2 HP: 80')
   end
-end
+
+  scenario 'Player 2 should be able to attack player 1' do
+    visit '/'
+    sign_in_and_play
+    find_button('Attack Guybrush Threepwood').click
+    expect(page).to have_content ('Player 1 HP: 80')
+  end
+
+  end
