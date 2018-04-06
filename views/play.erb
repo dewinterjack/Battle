@@ -4,30 +4,32 @@
 <body style="background: rgb(0, 0, 0)">
 
 <h1 style="color: rgb(212, 0, 0); text-align: center; font-size: 40px">
-<%=$player_1.name.upcase%> VS. <%=$player_2.name.upcase%>
+<%=@player_1.name.upcase%> VS. <%=@player_2.name.upcase%>
 </h1>
 
 
 <h2 style="color: rgb(205, 52, 4); text-align: left; font-size: 28px">
-  <%=$player_1.name.upcase%> <br>
-  HP <%=$player_1.hp%>
+  <%=@player_1.name.upcase%> <br>
+  HP <%=@player_1.hp%>
   <form method="post" action="/attack_player">
-      <input type="submit" value="Attack <%= $player_2.name %>">
-      <%$player = $player_2 %>  
-      </input>
+
+      <input type="submit" name="2" value="Attack <%= @player_2.name %>"/>
+
   </form>
   <iframe src="https://giphy.com/embed/xUA7baAaiwHbhC4P3q" align=left width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </h2>
 
+
+
+
 <h2 style="color: rgb(60, 134, 201); text-align: right; font-size: 28px">
-  <%=$player_2.name.upcase%> <br>
-  HP <%=$player_2.hp%>
-  <form method="post" action="/attack_player1">
-      <input type="submit">Attack <%=$player_1.name%> </input>
+  <%=@player_2.name.upcase%> <br>
+  HP <%=@player_2.hp%>
+  <form method="post" action="/attack_player">
+      <input type="submit" name="1" value="Attack <%= @player_1.name %>"/>
   </form>
   <iframe src="https://giphy.com/embed/l4FGEbli278gPBPYA" align=right width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </h2>
-<footer>
-  <a href="/">Home</a>
-</footer>
+
+
 </html>

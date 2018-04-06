@@ -6,7 +6,7 @@ feature 'allow players to input names and display them' do
 
   scenario 'form accepts name and displays it' do
     sign_in_and_play
-    expect(page).to have_content ("Guybrush Threepwood")
+    expect(page).to have_content ("GUYBRUSH THREEPWOOD VS. ELAINE MARLEY")
   end
 end
 
@@ -34,7 +34,7 @@ feature 'allow users to attack each other' do
   end
 
   scenario 'Player is sent with attack' do
-    
+
   end
 
 end
