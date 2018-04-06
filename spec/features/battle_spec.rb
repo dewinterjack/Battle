@@ -33,7 +33,19 @@ feature 'allow users to attack each other' do
     expect(page).to have_content ('HP 80')
   end
 
-  scenario 'Player is sent with attack' do
+  scenario 'HP cannot go lower than 0' do
+    visit '/'
+    game = Game.new("Jack","Jill")
+    game.player_1.hp = 0
+    game.player_1.lowerHP(game.player_1)
+    expect(game.player_1.hp).to eq 0
+  end
+
+  scenario 'A winner is shown when a player HP' do
+
+  end
+
+  scenario 'A player cannot make a turn more than once in a row' do
 
   end
 

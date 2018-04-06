@@ -12,7 +12,6 @@ class Game
     reduceHP(@player)
   end
 
-  private
   def reduceHP(player)
     player.hp -= 20
   end
