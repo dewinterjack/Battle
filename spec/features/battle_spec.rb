@@ -33,4 +33,8 @@ feature 'allow users to attack each other' do
     expect(page).to have_content ('HP 80')
   end
 
+  scenario 'Player is sent with attack' do
+    
+  end
+
 end

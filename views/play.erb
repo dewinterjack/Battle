@@ -11,8 +11,10 @@
 <h2 style="color: rgb(205, 52, 4); text-align: left; font-size: 28px">
   <%=$player_1.name.upcase%> <br>
   HP <%=$player_1.hp%>
-  <form method="post" action="/attack_player2">
-      <button type="submit">Attack <%=$player_2.name%> </button>
+  <form method="post" action="/attack_player">
+      <input type="submit" value="Attack <%= $player_2.name %>">
+      <%$player = $player_2 %>  
+      </input>
   </form>
   <iframe src="https://giphy.com/embed/xUA7baAaiwHbhC4P3q" align=left width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </h2>
@@ -25,6 +27,7 @@
   </form>
   <iframe src="https://giphy.com/embed/l4FGEbli278gPBPYA" align=right width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </h2>
-
-
+<footer>
+  <a href="/">Home</a>
+</footer>
 </html>

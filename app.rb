@@ -19,10 +19,10 @@ class Battle < Sinatra::Base
     erb :play
   end
 
-  # post '/attack_player' do
-  #   $player_2.hp -= 20
-  #   redirect to('/play')
-  # end
+  post '/attack_player' do
+    $player.hp -= 20
+    redirect to('/play')
+  end
 
 
   post '/attack_player2' do
@@ -31,6 +31,7 @@ class Battle < Sinatra::Base
   end
 
   post '/attack_player1' do
+    p params
     $player_1.hp -= 20
     redirect to('/play')
   end
