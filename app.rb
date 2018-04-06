@@ -16,12 +16,14 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-    @player1_name = $player_1.name
-    @player2_name = $player_2.name
-    @player1_HP = $player_1.hp
-    @player2_HP = $player_2.hp
     erb :play
   end
+
+  # post '/attack_player' do
+  #   $player_2.hp -= 20
+  #   redirect to('/play')
+  # end
+
 
   post '/attack_player2' do
     $player_2.hp -= 20
